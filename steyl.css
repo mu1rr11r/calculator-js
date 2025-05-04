@@ -1,0 +1,80 @@
+#calculator {
+    width: 90%;
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#displey {
+    width: 100%;
+    padding: 20px;
+    font-size: 2em;
+    text-align: right;
+    border: none;
+    background-color: #e0e0e0;
+    box-sizing: border-box;
+}
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#keys button {
+    padding: 15px;
+    font-size: 1.5em;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#keys button:hover {
+    background-color: #ddd;
+}
+
+#keys button:active {
+    background-color: #ccc;
+}
+
+#keys button:last-child {
+    grid-column: span 1; /* زرار الـ "=" */
+}
+
+#keys button:nth-child(16) { /* زرار الـ "=" */
+    background-color: #4caf50;
+    color: white;
+}
+
+#keys button:nth-child(16):hover { /* زرار الـ "=" */
+    background-color: #45a049;
+}
+
+#keys button:nth-child(17) { /* زرار الـ "C" */
+    background-color: #f44336;
+    color: white;
+}
+
+#keys button:nth-child(17):hover { /* زرار الـ "C" */
+    background-color: #d32f2f;
+}
+
+/* تنسيقات إضافية للشاشات الأكبر */
+@media (min-width: 600px) {
+    #calculator {
+        margin: 100px auto;
+    }
+
+    #displey {
+        font-size: 2.5em;
+        padding: 25px;
+    }
+
+    #keys button {
+        padding: 20px;
+        font-size: 1.8em;
+    }
+}
